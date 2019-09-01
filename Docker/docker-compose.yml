@@ -1,8 +1,5 @@
-version: "3"
-services:
-  scrape-calendar-data:
-    build: Scrape-Calendar-Data
-    restart: on-failure
-  server-monitor:
-    build: Server-Monitor
-    restart: unless-stopped
+scrape-calendar-data:
+  build: Scrape-Calendar-Data
+
+server-monitor:
+  build: Server-Monitor
