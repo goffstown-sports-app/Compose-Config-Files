@@ -1,5 +1,5 @@
-scrape-calendar-data:
+scrapeCalendarData:
   build: Scrape-Calendar-Data
 
-server-monitor:
+serverMonitor:
   build: Server-Monitor
