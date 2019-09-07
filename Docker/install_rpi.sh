@@ -1,7 +1,13 @@
 # Downloading docker onto a RPI
 
-# Download Docker
-curl -fsSL https://get.docker.com -o get-docker.sh
+# Downloading Docker:
+curl -fsSL get.docker.com -o get-docker.sh
 
-# Run Install File:
+# Install Docker:
 sh get-docker.sh
+
+# Giving Docker Sudo Privildages:
+sudo groupadd docker
+
+# Adding to the $USER Group:
+sudo gpasswd -a $USER docker
