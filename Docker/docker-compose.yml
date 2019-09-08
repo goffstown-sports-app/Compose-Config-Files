@@ -12,4 +12,4 @@ services:
   status-lights:
     build: Status-Lights
     network_mode: "host"
-    devices: /dev/gpiomem:/dev/gpiomem
+    device: /dev/gpiomem:/dev/gpiomem
