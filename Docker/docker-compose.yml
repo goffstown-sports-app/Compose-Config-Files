@@ -3,6 +3,8 @@ services:
   scrape-calendar-data:
     build: Scrape-Calendar-Data
     restart: on-failure
+    network_mode: "host"
   server-monitor:
     build: Server-Monitor
     restart: unless-stopped
+    network_mode: "host"
