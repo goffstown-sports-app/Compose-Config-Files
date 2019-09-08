@@ -9,3 +9,7 @@ services:
     build: Server-Monitor
     restart: unless-stopped
     network_mode: "host"
+  status-lights:
+    build: Status-Lights
+    network_mode: "host"
+    devices: /dev/gpiomem:/dev/gpiomem
