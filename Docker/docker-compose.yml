@@ -12,4 +12,3 @@ services:
     restart: on-failure
     volumes:
       - ~/secrets:/src/
-      - ~/secrets:/src/
