@@ -5,7 +5,7 @@ services:
     image: ghsapp/scrape-calendar-data
     network_mode: "host"
     volumes:
-      - ~/secrets/firestore_creds.json:/src/
+      - ~/secrets:/src/
   server-monitor:
     image: ghsapp/server-monitor
     network_mode: "host"
