@@ -7,6 +7,9 @@ services:
     volumes:
       - ~/secrets/firestore_creds.json:/src/
   server-monitor:
-    build: Server-Monitor
+    image: ghsapp/server-monitor
     network_mode: "host"
     restart: on-failure
+    volumes:
+      - ~/secrets/firestore_creds.json:/src/
+      - ~/secrets/email_password.json:/src/
