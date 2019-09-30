@@ -11,5 +11,5 @@ services:
     network_mode: "host"
     restart: on-failure
     volumes:
-      - ~/secrets/firestore_creds.json:/src/
-      - ~/secrets/email_password.txt:/src/
+      - ~/secrets:/src/
+      - ~/secrets:/src/
