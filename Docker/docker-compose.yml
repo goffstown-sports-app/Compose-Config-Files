@@ -12,4 +12,4 @@ services:
     restart: on-failure
     volumes:
       - ~/secrets/firestore_creds.json:/src/
-      - ~/secrets/email_password.json:/src/
+      - ~/secrets/email_password.txt:/src/
