@@ -2,8 +2,10 @@ version: "3"
 
 services:
   scrape-calendar-data:
-    build: Scrape-Calendar-Data
+    image: mattgleich/scrape-calendar-data 
     network_mode: "host"
+    volumes:
+      - ~/secrets/firestore_creds.json:/src/
   server-monitor:
     build: Server-Monitor
     network_mode: "host"
