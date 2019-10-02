@@ -2,12 +2,14 @@ version: "3"
 
 services:
   scrape-calendar-data:
-    image: ghsapp/scrape-calendar-data
+    container_name: scrape-calendar-data
+    build: Scrape-Calendar-Data
     network_mode: "host"
-    volumes:
-      - ~/secrets:/src/
   server-monitor:
-    image: ghsapp/server-monitor
+    container_name: server-monitor
+    build: Server-Monitor
+    network_mode: "host"
+    restart: unless-stopped
   status-lights:
     container_name: status-lights
     image: ghsapp/status-lights
