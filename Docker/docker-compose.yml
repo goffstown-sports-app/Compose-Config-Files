@@ -12,6 +12,7 @@ services:
     restart: unless-stopped
   status-lights:
     container_name: status-lights
+    privileged: true
     image: ghsapp/status-lights
     network_mode: "host"
     restart: unless-stopped
