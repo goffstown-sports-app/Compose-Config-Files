@@ -17,4 +17,4 @@ services:
     network_mode: "host"
     restart: unless-stopped
     volumes:
-      - ~/secrets:/src
+      - ~/secrets:/src/secrets
