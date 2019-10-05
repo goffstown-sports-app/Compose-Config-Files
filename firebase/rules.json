@@ -2,19 +2,29 @@
     "rules": {
         "calendar": {
             ".read": true,
-            ".write": "auth.uid === 'my-service-worker'"
+            ".write": "auth != null && auth.token.admin === true"
         },
         "db-info": {
-            ".read": "auth.uid === 'my-service-worker'",
-            ".write": "auth.uid === 'my-service-worker'"
+            "monitoring": {
+                ".read": true,
+                ".write": "auth != null && auth.token.admin === true"
+            },
+            "pulses": {
+                ".read": "auth != null && auth.token.admin === true",
+                ".write": "auth != null && auth.token.admin === true"
+            },
+            "statuses": {
+                ".read": true,
+                ".write": "auth != null && auth.token.admin === true"
+            }
         },
         "field-information": {
             ".read": true,
-            ".write": "auth.uid === 'my-service-worker'"
+            ".write": "auth != null && auth.token.admin === true"
         },
         "scores": {
             ".read": true,
-            ".write": "auth.uid === 'my-service-worker'"
+            ".write": "auth != null && auth.token.admin === true"
         }
     }
 }
