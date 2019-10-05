@@ -1,0 +1,20 @@
+{
+    "rules": {
+        "calendar": {
+            ".read": true,
+            ".write": "auth.uid === 'my-service-worker'"
+        },
+        "db-info": {
+            ".read": false,
+            ".write": "auth.uid === 'my-service-worker'"
+        },
+        "field-information": {
+            ".read": true,
+            ".write": "auth.uid === 'my-service-worker'"
+        },
+        "scores": {
+            ".read": true,
+            ".write": "auth.uid === 'my-service-worker'"
+        }
+    }
+}
