@@ -5,7 +5,7 @@
             ".write": "auth.uid === 'my-service-worker'"
         },
         "db-info": {
-            ".read": false,
+            ".read": "auth.uid === 'my-service-worker'",
             ".write": "auth.uid === 'my-service-worker'"
         },
         "field-information": {
