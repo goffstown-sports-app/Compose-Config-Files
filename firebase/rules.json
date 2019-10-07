@@ -5,18 +5,8 @@
             ".write": "auth.uid === 'my-service-worker'"
         },
         "db-info": {
-            "monitoring": {
-                ".read": true,
-                ".write": "auth.uid === 'my-service-worker'"
-            },
-            "pulses": {
-                ".read": "auth.uid === 'my-service-worker'",
-                ".write": "auth.uid === 'my-service-worker'"
-            },
-            "statuses": {
-                ".read": true,
-                ".write": "auth.uid === 'my-service-worker'"
-            }
+            ".read": "auth.uid === 'my-service-worker'",
+            ".write": "auth.uid === 'my-service-worker'"
         },
         "field-information": {
             ".read": true,
