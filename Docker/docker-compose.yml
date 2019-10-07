@@ -5,6 +5,8 @@ services:
     container_name: scrape-calendar-data
     build: Scrape-Calendar-Data
     network_mode: "host"
+    volumes:
+      - ~/secrets:/src/secrets
   server-monitor:
     container_name: server-monitor
     build: Server-Monitor
