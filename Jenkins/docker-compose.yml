@@ -3,7 +3,7 @@ version: "3"
 services:
   jenkins:
     container_name: jenkins
-    image: jenkins/jenkins
+    image: h1kkan/jenkins-docker
     ports:
       - "8080:8080"
     volumes:
