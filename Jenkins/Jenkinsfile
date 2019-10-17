@@ -1,0 +1,21 @@
+node {
+    def app
+    def appName = 'Scrape-Calendar-Data'
+
+    stage('Clone Repo') {
+        checkout scm
+    }
+
+    stage('Build Arm Image') {
+        app = docker.build("ghsapp/${appName}", "-f arm.Dockerfile")
+        echo "Building Image"
+    }
+
+    stage('Push Image') {
+        docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') {
+            app.push('arm')
+
+        }
+        echo "Image Pushed"
+    }
+}
